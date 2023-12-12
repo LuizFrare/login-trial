@@ -1,5 +1,3 @@
-// /src/components/Input.js
-
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./styles.css";
@@ -27,7 +25,7 @@ const Input = ({ type, label, value, onChange, placeholder, isPassword }) => {
 
   return (
     <div className="input-container">
-      <label>{label}</label>
+      <label className="label-atom">{label}</label>
       <div className="input-wrapper">
         <input
           type={isPassword && showPassword ? "text" : type}

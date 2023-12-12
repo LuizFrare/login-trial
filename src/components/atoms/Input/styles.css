@@ -1,14 +1,24 @@
 .input-container {
-  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
 }
 
 .input-wrapper {
   position: relative;
 }
 
+.label-atom {
+  color: #bcbcbc;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
 .eye-icon {
   position: absolute;
-  right: 0rem;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
@@ -34,22 +44,17 @@
   background: #202020;
   transition: border-color 0.3s ease;
   font-size: 0.875rem;
+  color: #e3e2e2;
 }
 
-.input-atom:target {
-  border-color: #07A5C4 ;
-}
-
-.input-atom:active {
-  border-color: #07A5C4 ;
-}
-
+.input-atom:target,
+.input-atom:active,
 .input-atom:hover {
-  border-color: #07A5C4 ;
+  border-color: #07a5c4;
 }
 
 .input-atom.error {
-  border-color:  #F87171;
+  border-color: #f87171;
 }
 
 .input-atom.success {
