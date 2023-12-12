@@ -5,6 +5,7 @@ import Input from "../../atoms/Input/Input";
 import useEmailValidation from "../../../hooks/useEmailValidation";
 import usePasswordValidation from "../../../hooks/usePasswordValidation";
 import "./styles.css";
+import Button from "../../atoms/Button/Button";
 
 const LoginForm = () => {
   const {
@@ -34,7 +35,7 @@ const LoginForm = () => {
     <div className="login-form">
       <Input
         type="text"
-        label="E-mail"
+        label="E-mail *"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Digite seu e-mail"
@@ -42,15 +43,15 @@ const LoginForm = () => {
       />
       <Input
         type="password"
-        label="Senha"
+        label="Senha *"
         value={password}
         isPassword
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Digite sua senha"
         error={passwordError}
       />
-
-      <button onClick={handleLogin}>Login</button>
+      
+      <Button variant='primary' onClick={handleLogin}>Sign in</Button>
     </div>
   );
 };
