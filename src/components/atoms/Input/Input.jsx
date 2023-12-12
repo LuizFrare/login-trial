@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "./styles.css";
+import EyeIcon from "../../../assets/icons/EyeIcon";
+import OpenEyeIcon from "../../../assets/icons/OpenEyeIcon";
 
 const Input = ({ type, label, value, onChange, placeholder, isPassword }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -17,6 +19,12 @@ const Input = ({ type, label, value, onChange, placeholder, isPassword }) => {
     }
   };
 
+  const passwordIcon = showPassword ? (
+    <EyeIcon fill="#BCBCBC" width="20" height="20" />
+  ) : (
+    <OpenEyeIcon fill="#BCBCBC" width="20" height="20" />
+  );
+
   return (
     <div className="input-container">
       <label>{label}</label>
@@ -26,6 +34,7 @@ const Input = ({ type, label, value, onChange, placeholder, isPassword }) => {
           value={value}
           onChange={onChange}
           placeholder={placeholder}
+          className="input-atom"
         />
         {isPassword && (
           <button
@@ -33,9 +42,7 @@ const Input = ({ type, label, value, onChange, placeholder, isPassword }) => {
             onClick={handleTogglePassword}
             onKeyDown={handleKeyDown}
             aria-label="Toggle Password Visibility"
-          >
-            👁️
-          </button>
+          >{passwordIcon}</button>
         )}
       </div>
     </div>
