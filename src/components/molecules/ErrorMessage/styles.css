@@ -1,0 +1,30 @@
+.error-message-box {
+  display: flex;
+  width: 100%;
+  max-width: 22rem;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.5rem;
+  background: #2e2121;
+}
+
+.message-warning {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+}
+
+.error-message-box-phrase {
+  color: #e3e2e2;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  margin: 0;
+}
+
+.close-error-message-box-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

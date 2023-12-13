@@ -1,9 +1,15 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 
 const OpenEyeIcon = ({ fill, width, height }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 18 15" fill="none">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 18 15"
+      fill="none"
+    >
       <path
         d="M11.5 7.49984C11.5 8.88055 10.3808 9.99984 9.00004 9.99984C7.61933 9.99984 6.50004 8.88055 6.50004 7.49984C6.50004 6.11913 7.61933 4.99984 9.00004 4.99984C10.3808 4.99984 11.5 6.11913 11.5 7.49984Z"
         stroke={fill}
@@ -27,6 +33,5 @@ OpenEyeIcon.propTypes = {
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
-
 
 export default OpenEyeIcon;
