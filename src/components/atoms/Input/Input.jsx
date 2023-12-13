@@ -4,7 +4,7 @@ import "./styles.css";
 import EyeIcon from "../../../assets/icons/EyeIcon";
 import OpenEyeIcon from "../../../assets/icons/OpenEyeIcon";
 
-const Input = ({ type, label, value, onChange, placeholder, isPassword }) => {
+const Input = ({ type, label, value, onChange, placeholder, isPassword, error, success }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const handleTogglePassword = () => {
@@ -23,6 +23,8 @@ const Input = ({ type, label, value, onChange, placeholder, isPassword }) => {
     <OpenEyeIcon fill="#BCBCBC" width="20" height="20" />
   );
 
+  const inputClassName = `input-atom ${error ? "error" : ""} ${success ? "success" : ""}`;
+
   return (
     <div className="input-container">
       <label className="label-atom">{label}</label>
@@ -32,7 +34,7 @@ const Input = ({ type, label, value, onChange, placeholder, isPassword }) => {
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          className="input-atom"
+          className={inputClassName}
         />
         {isPassword && (
           <button
@@ -43,6 +45,7 @@ const Input = ({ type, label, value, onChange, placeholder, isPassword }) => {
           >{passwordIcon}</button>
         )}
       </div>
+      {error && <span className="error-message">{error}</span>}
     </div>
   );
 };
@@ -54,6 +57,8 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,
   isPassword: PropTypes.bool,
+  error: PropTypes.string,
+  success: PropTypes.string,
 };
 
 export default Input;

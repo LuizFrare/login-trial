@@ -8,7 +8,7 @@ const usePasswordValidation = (initialValue = '') => {
 
   const validatePassword = () => {
     const isValid = password.length >= 6;
-    setError(isValid ? '' : 'Senha inválida (mínimo 6 caracteres)');
+    setError(isValid ? '' : 'Enter a valid password.');
     return isValid;
   };
 

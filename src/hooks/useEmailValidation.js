@@ -8,7 +8,7 @@ const useEmailValidation = (initialValue = '') => {
 
   const validateEmail = () => {
     const isValid = /\S+@\S+\.\S+/.test(email);
-    setError(isValid ? '' : 'E-mail inválido');
+    setError(isValid ? '' : 'Enter a valid email.');
     return isValid;
   };
 
