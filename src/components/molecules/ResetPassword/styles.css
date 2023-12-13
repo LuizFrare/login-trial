@@ -1,0 +1,15 @@
+.email-suport {
+  color: #bcbcbc;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0;
+  text-decoration: none;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}

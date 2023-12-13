@@ -1,9 +1,0 @@
-.toast {
-  display: flex;
-  width: 24rem;
-  padding: 1rem;
-  justify-content: space-between;
-  align-items: flex-start;
-  border-radius: 0.5rem;
-  background: #1b2b25;
-}

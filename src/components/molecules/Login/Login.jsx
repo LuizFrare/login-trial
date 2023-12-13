@@ -1,9 +1,8 @@
 import React from "react";
 import "./styles.css";
 import LoginForm from "../../molecules/LoginForm/LoginForm";
-import Copyright from "../../atoms/Copyright/Copyright";
 import MainText from "../../molecules/MainText/MainText";
-import Wrapper from "../../atoms/Wrapper/Wrapper";
+import { Wrapper, Copyright } from "../../atoms";
 
 const Login = () => {
   return (

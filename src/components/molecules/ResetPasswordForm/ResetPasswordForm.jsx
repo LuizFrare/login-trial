@@ -1,10 +1,7 @@
-// /src/components/LoginForm.js
-
-import React from "react";
-import Input from "../../atoms/Input/Input";
+import React, { useState } from "react";
 import useEmailValidation from "../../../hooks/useEmailValidation";
 import "./styles.css";
-import Button from "../../atoms/Button/Button";
+import { SuccessToast, Button, Input } from "../../atoms";
 
 const ResetPasswordForm = () => {
   const {
@@ -13,15 +10,14 @@ const ResetPasswordForm = () => {
     error: emailError,
     validateEmail,
   } = useEmailValidation();
+  const [showToast, setShowToast] = useState(false);
 
   const handleLogin = () => {
     const isEmailValid = validateEmail();
     if (isEmailValid) {
-      console.log(
-        "Login bem-sucedido. Redirecionar para a página de perfil do usuário."
-      );
+      setShowToast(true);
     } else {
-      console.log("Login falhou.");
+      setShowToast(false);
     }
   };
 
@@ -38,6 +34,14 @@ const ResetPasswordForm = () => {
       <Button variant="primary" onClick={handleLogin}>
         Request
       </Button>
+      {showToast ? (
+        <SuccessToast
+          phrase="Request successful!"
+          description="A new link has been sent to your email."
+          isVisible={showToast}
+          setIsVisible={setShowToast}
+        />
+      ) : null}
     </div>
   );
 };

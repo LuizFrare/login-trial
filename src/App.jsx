@@ -1,6 +1,5 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from "./components/organisms/HomePage/HomePage";
-import ForgotPassword from './components/organisms/ForgotPassword/ForgotPassword';
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HomePage, ForgotPassword } from "./components/organisms";
 
 function App() {
   return (

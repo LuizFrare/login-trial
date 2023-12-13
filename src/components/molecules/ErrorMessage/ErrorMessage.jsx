@@ -8,7 +8,6 @@ const ErrorMessage = ({ phrase, isVisible, setIsVisible }) => {
   const handleClose = () => {
     setIsVisible(false);
   };
-  console.log(isVisible);
 
   return isVisible ? (
     <div className="error-message-box">

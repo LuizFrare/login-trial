@@ -1,13 +1,10 @@
-// /src/components/LoginForm.js
-
 import React, { useState } from "react";
-import Input from "../../atoms/Input/Input";
-import useEmailValidation from "../../../hooks/useEmailValidation";
-import usePasswordValidation from "../../../hooks/usePasswordValidation";
 import "./styles.css";
-import Button from "../../atoms/Button/Button";
+import { Button, Input } from "../../atoms";
 import LoginOptions from "../LoginOptions/LoginOptions";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
+import usePasswordValidation from "../../../hooks/usePasswordValidation";
+import useEmailValidation from "../../../hooks/useEmailValidation";
 
 const LoginForm = () => {
   const {
@@ -29,18 +26,12 @@ const LoginForm = () => {
     const isPasswordValid = validatePassword();
 
     if (isEmailValid && isPasswordValid) {
-      console.log(
-        "Login bem-sucedido. Redirecionar para a página de perfil do usuário."
-      );
       setValidationError(false);
       setIsVisible(true);
     } else {
       setValidationError(true);
     }
   };
-
-  console.log(isVisible);
-
 
   return (
     <div className="login-form">
@@ -61,7 +52,13 @@ const LoginForm = () => {
         placeholder="Digite sua senha"
         error={passwordError}
       />
-      {isVisible && <ErrorMessage phrase="Login or password is invalid!" isVisible={isVisible} setIsVisible={setIsVisible} />}
+      {isVisible && (
+        <ErrorMessage
+          phrase="Login or password is invalid!"
+          isVisible={isVisible}
+          setIsVisible={setIsVisible}
+        />
+      )}
       <LoginOptions />
       <Button variant="primary" onClick={handleLogin}>
         Sign in

@@ -1,3 +1,5 @@
+
+
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -14,15 +16,20 @@
   background: #181818;
   outline: none;
   transition: background-color 0.3s, border-color 0.3s;
+  cursor: pointer;
 }
 
-.checkbox-container input[type="checkbox"]::before {
-  content: '\2713';
-  color: #E3E2E2;
-  font-size: 0.75rem;
-  visibility: hidden;
-  transition: color 0.3s;
+.checkbox-container input[type="checkbox"]:checked::before {
+  content: '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1rem;
+  height: 1rem;
+  background: url('../../../assets/images/check.svg') no-repeat center;
+  background-size: cover;
 }
+
 
 .checkbox-container label {
   color: #E3E2E2;

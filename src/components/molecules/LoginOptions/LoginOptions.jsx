@@ -1,7 +1,6 @@
 import React from "react";
 import "./styles.css";
-import Button from "../../atoms/Button/Button";
-import Checkbox from "../../atoms/Checkbox/Checkbox";
+import { Button, Checkbox } from "../../atoms";
 import { Link } from "react-router-dom";
 
 const LoginOptions = () => {

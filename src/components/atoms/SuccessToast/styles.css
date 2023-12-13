@@ -1,0 +1,49 @@
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.success-toast {
+  display: flex;
+  width: 24rem;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 0.5rem;
+  background: #1b2b25;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
+  animation: slideIn 0.3s ease-out;
+}
+
+.success-toast-wrapper {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.success-toast-message {
+  display: flex;
+  padding-top: 0.125rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.success-toast-phrase {
+  color: #e3e2e2;
+  margin: 0;
+}
+
+.success-toast-description {
+  color: #bcbcbc;
+  margin: 0;
+}
