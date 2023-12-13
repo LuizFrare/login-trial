@@ -1,0 +1,16 @@
+.right-container {
+  display: flex;
+  padding: 11.16669rem 7.40331rem 11.16969rem 7.41669rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: 0rem 0rem 0rem 9.375rem;
+  background: #202020;
+}
+
+.image-container {
+  max-width: 100%;
+  height: auto;
+}

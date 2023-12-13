@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const EyeIcon = ({ fill, width, height }) => {
   return (
@@ -12,6 +13,12 @@ const EyeIcon = ({ fill, width, height }) => {
       />
     </svg>
   );
+};
+
+EyeIcon.propTypes = {
+  fill: PropTypes.string.isRequired,
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 export default EyeIcon;

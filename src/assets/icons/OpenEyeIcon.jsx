@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from "prop-types";
 
 const OpenEyeIcon = ({ fill, width, height }) => {
   return (
@@ -20,5 +21,12 @@ const OpenEyeIcon = ({ fill, width, height }) => {
     </svg>
   );
 };
+
+OpenEyeIcon.propTypes = {
+  fill: PropTypes.string.isRequired,
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+};
+
 
 export default OpenEyeIcon;
