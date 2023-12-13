@@ -1,21 +1,20 @@
 import React from "react";
 import "./styles.css";
 import LoginForm from "../../molecules/LoginForm/LoginForm";
+import Copyright from "../../atoms/Copyright/Copyright";
+import MainText from "../../molecules/MainText/MainText";
+import Wrapper from "../../atoms/Wrapper/Wrapper";
 
 const Login = () => {
   return (
     <div className="left-container">
-      <div className="login-container">
-        <div className="wrapper">
-          <div className="greeting-text">
-            <h2>Welcome back</h2> <h3>to the Harpia SIEM!</h3>
-          </div>
+      <Wrapper className="login-container">
+        <Wrapper>
+          <MainText h2Text="Welcome back" h3Text="to the Harpia SIEM!" />
           <LoginForm />
-        </div>
-        <p className="copyright">
-          © 2022 SafeLabs. All rights reserved. v2.0.0
-        </p>
-      </div>
+        </Wrapper>
+        <Copyright />
+      </Wrapper>
     </div>
   );
 };
