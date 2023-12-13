@@ -23,7 +23,7 @@ const LoginForm = () => {
     validatePassword,
   } = usePasswordValidation();
   const [validationError, setValidationError] = useState(false);
-
+  const [isVisible, setIsVisible] = useState(false);
   const handleLogin = () => {
     const isEmailValid = validateEmail();
     const isPasswordValid = validatePassword();
@@ -33,11 +33,14 @@ const LoginForm = () => {
         "Login bem-sucedido. Redirecionar para a página de perfil do usuário."
       );
       setValidationError(false);
+      setIsVisible(true);
     } else {
-      console.log("Login falhou.");
       setValidationError(true);
     }
   };
+
+  console.log(isVisible);
+
 
   return (
     <div className="login-form">
@@ -58,7 +61,7 @@ const LoginForm = () => {
         placeholder="Digite sua senha"
         error={passwordError}
       />
-      {validationError && <ErrorMessage phrase="Login or password is invalid!" />}
+      {isVisible && <ErrorMessage phrase="Login or password is invalid!" isVisible={isVisible} setIsVisible={setIsVisible} />}
       <LoginOptions />
       <Button variant="primary" onClick={handleLogin}>
         Sign in

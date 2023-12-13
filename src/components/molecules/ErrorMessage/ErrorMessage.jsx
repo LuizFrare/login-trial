@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import "./styles.css";
 import CloseIcon from "../../../assets/icons/CloseIcon";
 import WarningIcon from "../../../assets/icons/WarningIcon";
 
-const ErrorMessage = ({ phrase }) => {
-  const [isVisible, setIsVisible] = useState(true);
-
+const ErrorMessage = ({ phrase, isVisible, setIsVisible }) => {
   const handleClose = () => {
     setIsVisible(false);
   };
+  console.log(isVisible);
 
   return isVisible ? (
     <div className="error-message-box">
@@ -26,6 +25,8 @@ const ErrorMessage = ({ phrase }) => {
 
 ErrorMessage.propTypes = {
   phrase: PropTypes.string.isRequired,
+  isVisible: PropTypes.bool.isRequired,
+  setIsVisible: PropTypes.func.isRequired,
 };
 
 export default ErrorMessage;

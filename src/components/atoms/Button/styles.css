@@ -21,6 +21,7 @@ button {
   background: #0891b2;
   color: #181818;
   width: 100%;
+  font-weight: 500;
 }
 
 .primary::before {
