@@ -6,6 +6,7 @@ import useEmailValidation from "../../../hooks/useEmailValidation";
 import usePasswordValidation from "../../../hooks/usePasswordValidation";
 import "./styles.css";
 import Button from "../../atoms/Button/Button";
+import LoginOptions from "../LoginOptions/LoginOptions";
 
 const LoginForm = () => {
   const {
@@ -50,7 +51,7 @@ const LoginForm = () => {
         placeholder="Digite sua senha"
         error={passwordError}
       />
-      
+      <LoginOptions />
       <Button variant='primary' onClick={handleLogin}>Sign in</Button>
     </div>
   );
