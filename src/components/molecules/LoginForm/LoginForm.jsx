@@ -21,7 +21,10 @@ const LoginForm = () => {
   } = usePasswordValidation();
   const [validationError, setValidationError] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
-  const handleLogin = () => {
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
     const isEmailValid = validateEmail();
     const isPasswordValid = validatePassword();
 
@@ -34,7 +37,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="login-form">
+    <form className="login-form" onSubmit={handleLogin}>
       <Input
         type="text"
         label="E-mail *"
@@ -60,10 +63,10 @@ const LoginForm = () => {
         />
       )}
       <LoginOptions />
-      <Button variant="primary" onClick={handleLogin}>
+      <Button variant="primary" type="submit">
         Sign in
       </Button>
-    </div>
+    </form>
   );
 };
 

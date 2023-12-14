@@ -42,6 +42,7 @@ const Input = ({ type, label, value, onChange, placeholder, isPassword, error, s
             onClick={handleTogglePassword}
             onKeyDown={handleKeyDown}
             aria-label="Toggle Password Visibility"
+            type="button"
           >{passwordIcon}</button>
         )}
       </div>

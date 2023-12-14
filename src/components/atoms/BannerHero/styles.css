@@ -8,6 +8,7 @@
   align-self: stretch;
   border-radius: 0rem 0rem 0rem 9.375rem;
   background: #202020;
+  min-width: 22.7rem;
 }
 
 .image-container {

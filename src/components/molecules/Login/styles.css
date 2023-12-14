@@ -6,6 +6,7 @@
   align-items: center;
   flex: 1 0 0;
   align-self: stretch;
+  min-width: 25.8rem;
 }
 
 .login-container {

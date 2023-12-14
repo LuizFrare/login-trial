@@ -12,7 +12,9 @@ const ResetPasswordForm = () => {
   } = useEmailValidation();
   const [showToast, setShowToast] = useState(false);
 
-  const handleLogin = () => {
+  const handleResetPassword = (e) => {
+    e.preventDefault();
+
     const isEmailValid = validateEmail();
     if (isEmailValid) {
       setShowToast(true);
@@ -22,7 +24,7 @@ const ResetPasswordForm = () => {
   };
 
   return (
-    <div className="reset-password-form">
+    <form className="reset-password-form" onSubmit={handleResetPassword}>
       <Input
         type="text"
         label="E-mail *"
@@ -31,7 +33,7 @@ const ResetPasswordForm = () => {
         placeholder="Digite seu e-mail"
         error={emailError}
       />
-      <Button variant="primary" onClick={handleLogin}>
+      <Button type="submit" variant="primary">
         Request
       </Button>
       {showToast ? (
@@ -42,7 +44,7 @@ const ResetPasswordForm = () => {
           setIsVisible={setShowToast}
         />
       ) : null}
-    </div>
+    </form>
   );
 };
 
