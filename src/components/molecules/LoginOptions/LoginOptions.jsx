@@ -8,7 +8,7 @@ const LoginOptions = () => {
     <div className="login-options">
       <Checkbox label="Remember me" />
       <Link to="/forgot-password">
-        <Button variant="secondary">Forgot my password</Button>
+        <Button type="button" variant="secondary">Forgot my password</Button>
       </Link>
     </div>
   );
