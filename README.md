@@ -34,7 +34,7 @@ O projeto consiste em vários componentes React, incluindo um formulário de log
 5. Abra seu navegador e acesse [http://localhost:3000](http://localhost:3000) para visualizar o projeto.
 
 ## Demonstração Ao Vivo
-Para uma demonstração ao vivo do projeto, você pode acessá-lo [aqui](#).
+Para uma demonstração ao vivo do projeto, você pode acessá-lo [aqui](#https://login-trial-omega.vercel.app/).
 
 Sinta-se à vontade para explorar os vários componentes e funcionalidades implementadas neste projeto. Se tiver alguma dúvida ou feedback, não hesite em entrar em contato.
 
