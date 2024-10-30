@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage, ForgotPassword } from "./components/organisms";
 
 function App() {
+  console.log('hack')
   return (
     <BrowserRouter>
       <Routes>
