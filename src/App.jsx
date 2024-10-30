@@ -4,7 +4,6 @@ import { HomePage, ForgotPassword } from "./components/organisms";
 function App() {
   console.log('hack')
   console.log('hack tober')
-  console.log('hack tober fest')
 
   return (
     <BrowserRouter>
